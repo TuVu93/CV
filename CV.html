@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tu Vu's CV</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        /*------------------------ 1 Body and Core Css ------------------------*/
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #fafafa;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        /* Typography */
+        p {
+            font-size: 14px;
+            color: #2b2b2b;
+            line-height: 20px;
+        }
+
+        h1 {
+            font-size: 50px;
+            font-weight: 500;
+        }
+
+        h2 {
+            line-height: 70px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        h3 {
+            font-size: 17px;
+            line-height: 29px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        h4 {
+            line-height: 22px;
+            font-size: 13px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        h5 {
+            color: #7F7F7F;
+            line-height: 20px;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 13px;
+            margin: 0;
+        }
+
+        /* Margins & Paddings */
+
+        .top_15 {
+            margin-top: 15px;
+        }
+
+        .pad_0 {
+            padding: 0;
+        }
+
+        .padside_30 {
+            padding: 0 30px;
+        }
+
+        .padside_20 {
+            padding: 0 20px;
+        }
+
+        .padside_15 {
+            padding: 0 15px;
+        }
+
+        .padleft_15 {
+            padding-left: 15px;
+        }
+
+        .padright_150 {
+            padding-right: 150px;
+        }
+
+        .bot_15 {
+            margin-bottom: 15px;
+        }
+
+        .bot_30 {
+            margin-bottom: 30px;
+        }
+
+        /*------------------------ 2 Profile Section ------------------------*/
+
+        .profile {
+            background: #fff;
+            border-radius: 6px;
+            -moz-border-radius: 6px;
+            -webkit-border-radius: 6px;
+            -o-border-radius: 6px;
+            width: 100%;
+            display: inline-block;
+            box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.07);
+            -webkit-box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.07);
+            -moz-box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.07);
+        }
+
+        .profile-name {
+            line-height: 18px;
+            padding: 20px;
+        }
+
+        .profile .name {
+            text-transform: uppercase;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        .profile .job {
+            font-size: 13px;
+            color: #777777;
+        }
+
+        .profile-image {
+            margin-top: -18px;
+            -webkit-clip-path: polygon(0 9%, 100% 0, 100% 94%, 0% 100%);
+            clip-path: polygon(0 9%, 100% 0, 100% 94%, 0% 100%);
+            margin-bottom: 30px;
+        }
+
+        .profile-image img {
+            width: 100%;
+        }
+
+        @media (max-width: 991px) {
+            ul.profile-information {
+                list-style: none;
+                display: table;
+                margin: 0 auto;
+                width: 50%;
+            }
+
+            ul.profile-information li {
+                border-left: solid 2px #006BB6;
+                padding: 0 0 23px 20px;
+                font-size: 14px;
+                color: #787878;
+            }
+
+            ul.profile-information li p {
+                font-size: 13.5px;
+                color: #7F7F7F;
+                line-height: 12px;
+            }
+
+            ul.profile-information li:last-child {
+                border: 0;
+                margin-left: 2px;
+                margin-top: -2px;
+            }
+        }
+
+        @media (min-width: 992px) {
+
+            ul.profile-information {
+                list-style: none;
+                margin: 8px 0px 8px 35px;
+                padding: 0;
+            }
+
+            ul.profile-information li {
+                border-left: solid 2px #006BB6;
+                padding: 0 0 23px 20px;
+                font-size: 14px;
+                color: #787878;
+            }
+
+            ul.profile-information li p {
+                font-size: 13.5px;
+                color: #7F7F7F;
+                line-height: 12px;
+            }
+
+            ul.profile-information li:last-child {
+                border: 0;
+                margin-left: 2px;
+                margin-top: -2px;
+            }
+        }
+
+        ul.profile-information li:before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            -webkit-clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
+            clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
+            font-size: 8px;
+            margin-left: -25px;
+            margin-top: -2px;
+            font-weight: 400;
+            background: #fff;
+            display: block;
+            position: absolute;
+            background-color: #FDB927;
+        }
+
+        ul.profile-information li span {
+            color: #26282A;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .social-icons a img {
+            width: 50px;
+            height: 50px;
+        }
+
+        /*------------------------ 3 Navigation ------------------------*/
+
+        header nav {
+            background: #fff;
+            display: inline-block;
+            border-radius: 6px;
+            -moz-border-radius: 6px;
+            -webkit-border-radius: 6px;
+            width: 100%;
+            margin-bottom: 15px;
+            line-height: 70px;
+            box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.07);
+            -webkit-box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.07);
+            -moz-box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.07);
+        }
+
+        .sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        header nav ul li {
+            float: left;
+        }
+
+        header nav ul li a {
+            font-size: 14px;
+            font-weight: bold;
+            color: #000;
+            display: block;
+        }
+
+        .nav>li>a:focus,
+        .nav>li>a:hover,
+        .nav>li>a {
+            background-color: transparent;
+            padding: 0 20px;
+            color: #000;
+            border-radius: 6px;
+            -moz-border-radius: 6px;
+            -webkit-border-radius: 6px;
+            transition: all ease 0.3s;
+            -webkit-transition: all ease 0.3s;
+            -moz-transition: all ease 0.3s;
+            background-color: transparent;
+        }
+
+        .nav-pills>li.active>a,
+        .nav-pills>li.active>a:focus,
+        .nav-pills>li.active>a:hover {
+            background-color: #006BB6;
+        }
+
+        .nav-pills>li.active>a>img {
+            filter: invert(100%);
+        }
+
+        .tab-title {
+            line-height: 30px;
+            border-style: dashed;
+            border-width: 0 0 2px 2px;
+            border-color: #FDB927;
+            margin-bottom: 20px;
+            padding-left: 13px;
+        }
+
+        .tab-pane p {
+            text-align: justify;
+        }
+
+        .exp-container {
+            border-style: double;
+            border-width: 0 0 0 2px;
+            border-color: #FDB927;
+        }
+
+        .exp-title {
+            color: #006BB6;
+            line-height: 25px;
+            margin-bottom: 5px;
+            list-style: none;
+        }
+
+        ul.exp-info li {
+            display: block;
+            width: 100%;
+        }
+
+        ul.exp-info li:before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            margin-left: -20px;
+            margin-top: 10px;
+            display: block;
+            position: absolute;
+            background-color: #FDB927;
+        }
+
+        .exp-info {
+            line-height: 20px;
+            margin-bottom: 0;
+            padding-left: 20px;
+            list-style: none;
+        }
+
+        .exp-info li p {
+            margin-bottom: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Wrapper -->
+    <div class="wrapper top_15 container">
+        <div class="row">
+
+            <!-- Profile Section
+    ================================================== -->
+            <div class="col-lg-3 col-md-4 bot_30">
+                <div class="profile">
+                    <div class="profile-name">
+                        <span class="name">Tu Vu</span><br>
+                        <span class="job">Front-end/ Fullstack Web Developer</span>
+                    </div>
+                    <figure class="profile-image">
+                        <img src="https://pbs.twimg.com/profile_images/808475349671493632/nvi7WJf4_400x400.jpg" alt="">
+                    </figure>
+                    <ul class="profile-information mx-auto">
+                        <li>
+                            <p><span>Name:</span> Tu (Minh) Vu</p>
+                        </li>
+                        <li>
+                            <p><span>Birthday:</span> 09 August 1993</p>
+                        </li>
+                        <li>
+                            <p><span>Email:</span> vuminhtu07@gmail.com</p>
+                        </li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/tu-vu-64b784158/"><img src="https://png.icons8.com/windows/80/000000/linkedin.png"></a>
+                        <a href="https://github.com/TuVu93"><img src="https://png.icons8.com/windows/80/000000/github.png"></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page Tab Container Div -->
+            <div class="col-lg-9 col-md-8 tab-container">
+                <!-- Header
+    ================================================== -->
+                <div class="row">
+                    <header class="col-md-12 sticky">
+                        <nav>
+                            <!-- navigation bar -->
+                            <div class="col">
+                                <ul class="nav nav-pills">
+                                    <li class="active"><a data-toggle="pill" href="#home"><img src="https://png.icons8.com/windows/32/000000/user-male.png"></a></li>
+                                    <li><a data-toggle="pill" href="#education"><img src="https://png.icons8.com/windows/32/000000/graduation-cap.png"></a></li>
+                                    <li><a data-toggle="pill" href="#skill"><img src="https://png.icons8.com/windows/32/000000/resume.png"></a></li>
+                                    <li><a data-toggle="pill" href="#exp"><img src="https://png.icons8.com/windows/32/000000/construction-worker.png"></a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </header>
+
+                    <!-- Page Content ================================================== -->
+                    <header class="col-md-12">
+                        <nav class="padside_30">
+                            <div class="tab-content">
+                                <div id="home" class="tab-pane fade in active">
+                                    <h2>Contact Information</h2>
+                                    <h3 class="tab-title">About me</h3>
+                                    <p class="padside_15">Astute Junior Software Engineer enthusiastic about developing
+                                        and
+                                        problem-solving in
+                                        software development. Experiences in Java, C++, Android Studio, HTML and Unity.
+                                        A
+                                        creative, quick learning, initiative & highly motivated worker.</p>
+                                    <h3 class="tab-title">Details</h3>
+                                    <p class="padside_15">"At vero eos et accusamus et iusto odio dignissimos ducimus
+                                        qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et
+                                        quas molestias excepturi sint occaecati cupiditate non provident, similique
+                                        sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
+                                        fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero
+                                        tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id
+                                        quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor
+                                        repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum
+                                        necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non
+                                        recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut
+                                        reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus
+                                        asperiores repellat."</p>
+                                    <h3 class="tab-title">Hobbies</h3>
+                                    <p class="padside_15">"At vero eos et accusamus et iusto odio dignissimos ducimus
+                                        qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et
+                                        quas molestias excepturi sint occaecati cupiditate non provident, similique
+                                        sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
+                                        fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero
+                                        tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id
+                                        quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor
+                                        repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum
+                                        necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non
+                                        recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut
+                                        reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus
+                                        asperiores repellat."</p>
+                                </div>
+                                <div id="education" class="tab-pane fade">
+                                    <h2>Education</h2>
+                                    <div class="col-md-12 bot_15 pad_0">
+                                        <div class="col-md-2 col-sm-2 col-xs-2 pad_0">
+                                            <h4>09-2013 ‒<br>2018</h4>
+                                        </div>
+                                        <div class="col-md-10 col-sm-10 col-xs-10">
+                                            <h3 class="exp-title">Bachelor of Information Technology</h3>
+                                            <h5>Lapland University of Applied Sciences, Rovaniemi</h5>
+                                            <ul class="exp-info">
+                                                <li>
+                                                    <p>A Software Engineer Degree with mainly focus on System
+                                                        Administrator, System Designer & System Developer</p>
+                                                </li>
+                                                <li>
+                                                    <p>Develop a complete game using Unity in a school's project as a
+                                                        lead software developer</p>
+                                                </li>
+                                                <li>
+                                                    <p>Currently in the thesis phase. The topic is about creating a
+                                                        responsive website using LapinAMK's school map for navigation.</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 bot_15 pad_0">
+                                        <div class="col-md-2 col-sm-2 col-xs-2 pad_0">
+                                            <h4>2008 ‒<br>2011</h4>
+                                        </div>
+                                        <div class="col-md-10 col-sm-10 col-xs-10">
+                                            <h3 class="exp-title">Luong The Vinh High School for the Gifted</h3>
+                                            <h5>Vietnam</h5>
+                                            <ul class="exp-info">
+                                                <li>
+                                                    <p>Department: Information Technology.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Nominated in Information Technology National Exam 2011.</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="skill" class="tab-pane fade">
+                                    <h2>Skills</h2>
+                                    <h3 class="tab-title">Programming</h3>
+                                    <p class="padside_15">Astute Junior Software Engineer enthusiastic about developing
+                                        and
+                                        problem-solving in
+                                        software development. Experiences in Java, C++, Android Studio, HTML and Unity.
+                                        A
+                                        creative, quick learning, initiative & highly motivated worker.</p>
+                                    <h3 class="tab-title">Design</h3>
+                                    <p class="padside_15">"At vero eos et accusamus et iusto odio dignissimos ducimus
+                                        qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et
+                                        quas molestias excepturi sint occaecati cupiditate non provident, similique
+                                        sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
+                                        fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero
+                                        tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id
+                                        quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor
+                                        repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum
+                                        necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non
+                                        recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut
+                                        reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus
+                                        asperiores repellat."</p>
+                                    <h3 class="tab-title">Others</h3>
+                                    <p class="padside_15">"At vero eos et accusamus et iusto odio dignissimos ducimus
+                                        qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et
+                                        quas molestias excepturi sint occaecati cupiditate non provident, similique
+                                        sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
+                                        fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero
+                                        tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id
+                                        quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor
+                                        repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum
+                                        necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non
+                                        recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut
+                                        reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus
+                                        asperiores repellat."</p>
+                                </div>
+                                <div id="exp" class="tab-pane fade">
+                                    <h2>Experiences</h2>
+                                    <div class="col-md-12 bot_15 pad_0">
+                                        <div class="col-md-2 col-sm-2 col-xs-2 pad_0">
+                                            <h4>2012 ‒<br>12-2013</h4>
+                                        </div>
+                                        <div class="col-md-10 col-sm-10 col-xs-10">
+                                            <h3 class="exp-title">Web Administrator at [<a href="https://vsava.com">vsava.com</a>]</h3>
+                                            <h5>Vietnam Small Animal Veterinary Association, Ho Chi Minh City</h5>
+                                            <ul class="exp-info">
+                                                <li>
+                                                    <p>Managed Vietnam Small Animal Veterinary Association Website</p>
+                                                </li>
+                                                <li>
+                                                    <p>Mainly responsible for content, user management and website
+                                                        maintanance.</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 bot_15 pad_0">
+                                        <div class="col-md-2 col-sm-2 col-xs-2 pad_0">
+                                            <h4>06-2015 ‒<br>09-2015</h4>
+                                        </div>
+                                        <div class="col-md-10 col-sm-10 col-xs-10">
+                                            <h3 class="exp-title">Android Developer Trainee</h3>
+                                            <h5>Appro Mobile Co. Ltd., Ho Chi Minh City</h5>
+                                            <ul class="exp-info">
+                                                <li>
+                                                    <p>Be part of the development team in a Tax Consulting app for iOS
+                                                        &
+                                                        Android for Korean customer</p>
+                                                </li>
+                                                <li>
+                                                    <p>Mainly responsible for creating test cases, finding & fixing
+                                                        bugs</p>
+                                                </li>
+                                                <li>
+                                                    <p>Design a small UI part for Android version.</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 bot_15 pad_0">
+                                        <div class="col-md-2 col-sm-2 col-xs-2 pad_0">
+                                            <h4>06-2017 ‒<br>09-2017</h4>
+                                        </div>
+                                        <div class="col-md-10 col-sm-10 col-xs-10">
+                                            <h3 class="exp-title">Junior Software Developer</h3>
+                                            <h5>Ho Chi Minh City, Vietnam</h5>
+                                            <ul class="exp-info">
+                                                <li>
+                                                    <p>Create and maintenance a native Windows program to keep track of
+                                                        car rental for a family company.</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                        <a href="https://icons8.com">Icon pack by Icons8</a>
+                    </header> <!-- col-md-12 end -->
+                </div><!-- row end -->
+            </div> <!-- Tab Container - End -->
+        </div> <!-- Row - End -->
+    </div> <!-- Wrapper - End -->
+
+
+    <script language="javascript">
+        window.onscroll = function () { myFunction() };
+
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            $('#myBar')
+                .css("width", scrolled + "%")
+                .attr("aria-valuenow", scrolled)
+                .text(scrolled + "% Complete");
+        }
+    </script>
+</body>
+
+</html>
