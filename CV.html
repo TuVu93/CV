@@ -9,7 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
-        /*------------------------ 1 Body and Core Css ------------------------*/
+        /* Core Css */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: #fafafa;
@@ -19,13 +19,22 @@
 
         html {
             height: 100%;
+            min-width: 500px;
         }
 
         /* Typography */
         p {
             font-size: 14px;
-            color: #2b2b2b;
+            color: #252525;
             line-height: 20px;
+        }
+
+        a,
+        a:active,
+        a:hover,
+        a:focus {
+            color: #252525;
+            text-decoration: none;
         }
 
         h1 {
@@ -34,14 +43,15 @@
         }
 
         h2 {
+            color: #222222;
             line-height: 70px;
             font-size: 25px;
             font-weight: bold;
         }
 
         h3 {
+            color: #2e2c2c;
             font-size: 17px;
-            line-height: 29px;
             font-weight: bold;
             margin: 0;
         }
@@ -63,10 +73,6 @@
         }
 
         /* Margins & Paddings */
-
-        .top_15 {
-            margin-top: 15px;
-        }
 
         .pad_0 {
             padding: 0;
@@ -92,15 +98,19 @@
             padding-right: 150px;
         }
 
+        .padbot_30 {
+            padding-bottom: 30px;
+        }
+
+        .top_15 {
+            margin-top: 15px;
+        }
+
         .bot_15 {
             margin-bottom: 15px;
         }
 
-        .bot_30 {
-            margin-bottom: 30px;
-        }
-
-        /*------------------------ 2 Profile Section ------------------------*/
+        /* Profile Section */
 
         .profile {
             background: #fff;
@@ -149,25 +159,6 @@
                 margin: 0 auto;
                 width: 50%;
             }
-
-            ul.profile-information li {
-                border-left: solid 2px #006BB6;
-                padding: 0 0 23px 20px;
-                font-size: 14px;
-                color: #787878;
-            }
-
-            ul.profile-information li p {
-                font-size: 13.5px;
-                color: #7F7F7F;
-                line-height: 12px;
-            }
-
-            ul.profile-information li:last-child {
-                border: 0;
-                margin-left: 2px;
-                margin-top: -2px;
-            }
         }
 
         @media (min-width: 992px) {
@@ -177,25 +168,24 @@
                 margin: 8px 0px 8px 35px;
                 padding: 0;
             }
+        }
 
-            ul.profile-information li {
-                border-left: solid 2px #006BB6;
-                padding: 0 0 23px 20px;
-                font-size: 14px;
-                color: #787878;
-            }
+        ul.profile-information li {
+            border-left: solid 2px#7f7f7f;
+            padding: 0 0 23px 20px;
+            font-size: 14px;
+        }
 
-            ul.profile-information li p {
-                font-size: 13.5px;
-                color: #7F7F7F;
-                line-height: 12px;
-            }
+        ul.profile-information li p {
+            font-size: 13.5px;
+            color: #7F7F7F;
+            line-height: 12px;
+        }
 
-            ul.profile-information li:last-child {
-                border: 0;
-                margin-left: 2px;
-                margin-top: -2px;
-            }
+        ul.profile-information li:last-child {
+            border: 0;
+            margin-left: 2px;
+            margin-top: -2px;
         }
 
         ul.profile-information li:before {
@@ -211,7 +201,7 @@
             background: #fff;
             display: block;
             position: absolute;
-            background-color: #FDB927;
+            background-color: #222222;
         }
 
         ul.profile-information li span {
@@ -231,7 +221,7 @@
             height: 50px;
         }
 
-        /*------------------------ 3 Navigation ------------------------*/
+        /* Navigation */
 
         header nav {
             background: #fff;
@@ -265,9 +255,9 @@
             display: block;
         }
 
-        .nav>li>a:focus,
-        .nav>li>a:hover,
-        .nav>li>a {
+        .nav li a:focus,
+        .nav li a:hover,
+        .nav li a {
             background-color: transparent;
             padding: 0 20px;
             color: #000;
@@ -280,48 +270,44 @@
             background-color: transparent;
         }
 
-        .nav-pills>li.active>a,
-        .nav-pills>li.active>a:focus,
-        .nav-pills>li.active>a:hover {
-            background-color: #006BB6;
+        .nav-pills li.active a,
+        .nav-pills li.active a:focus,
+        .nav-pills li.active a:hover {
+            background-color: #7f7f7f;
         }
 
         .nav-pills>li.active>a>img {
             filter: invert(100%);
         }
 
+        /* Tab Pane */
+
         .tab-title {
+            height: 30px;
             line-height: 30px;
-            border-style: dashed;
-            border-width: 0 0 2px 2px;
-            border-color: #FDB927;
+            /* border-style: dotted;
+            border-width: 2px;
+            border-color: #006BB6; */
             margin-bottom: 20px;
-            padding-left: 13px;
+            padding-left: 15px;
         }
 
         .tab-pane p {
             text-align: justify;
         }
 
-        .exp-container {
-            border-style: double;
-            border-width: 0 0 0 2px;
-            border-color: #FDB927;
-        }
-
-        .exp-title {
-            color: #006BB6;
-            line-height: 25px;
+        .item-title {
+            line-height: 22px;
             margin-bottom: 5px;
             list-style: none;
         }
 
-        ul.exp-info li {
+        ul.item-info li {
             display: block;
             width: 100%;
         }
 
-        ul.exp-info li:before {
+        ul.item-info li:before {
             content: "";
             width: 6px;
             height: 6px;
@@ -331,18 +317,60 @@
             margin-top: 10px;
             display: block;
             position: absolute;
-            background-color: #FDB927;
+            background-color: rgb(44, 43, 42);
         }
 
-        .exp-info {
+        .item-info {
             line-height: 20px;
             margin-bottom: 0;
             padding-left: 20px;
             list-style: none;
         }
 
-        .exp-info li p {
+        .item-info li p {
             margin-bottom: 5px;
+        }
+
+        .progress {
+            background: rgba(245, 245, 245, 1);
+            border: 0px solid rgba(245, 245, 245, 1);
+            border-radius: 20;
+            height: 11px;
+        }
+
+        .progress-bar-custom {
+            background: #222222;
+        }
+
+        .skill-level {
+            float: right;
+            margin-top: 5px;
+        }
+
+        .hobby {
+            text-align: center;
+            display: inline-block;
+            background-color: transparent;
+            margin-top: -20px;
+        }
+
+        .hobby img {
+            height: 40px;
+            width: 40px;
+        }
+
+        /* Footer */
+
+        footer nav {
+            background: #fff;
+            display: inline-block;
+            border-radius: 6px;
+            -moz-border-radius: 6px;
+            -webkit-border-radius: 6px;
+            line-height: 70px;
+            box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.07);
+            -webkit-box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.07);
+            -moz-box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.07);
         }
     </style>
 
@@ -353,26 +381,28 @@
     <div class="wrapper top_15 container">
         <div class="row">
 
-            <!-- Profile Section
-    ================================================== -->
-            <div class="col-lg-3 col-md-4 bot_30">
+            <!-- Profile Section -->
+            <div class="col-lg-3 col-md-4 bot_15">
                 <div class="profile">
                     <div class="profile-name">
                         <span class="name">Tu Vu</span><br>
                         <span class="job">Front-end/ Fullstack Web Developer</span>
                     </div>
                     <figure class="profile-image">
-                        <img src="https://pbs.twimg.com/profile_images/808475349671493632/nvi7WJf4_400x400.jpg" alt="">
+                        <img src="https://lh3.googleusercontent.com/wi-XlmV0V943lokCy8iTriqehbBymIZ6dUBixA0zygpiaCu4NFkf3A65xcewE5T3ovRFOVs6gtIU3fV8DkII=w1920-h938" alt="">
                     </figure>
                     <ul class="profile-information mx-auto">
                         <li>
-                            <p><span>Name:</span> Tu (Minh) Vu</p>
+                            <p><span>Name:</span> Tu [Minh] Vu</p>
                         </li>
                         <li>
                             <p><span>Birthday:</span> 09 August 1993</p>
                         </li>
                         <li>
                             <p><span>Email:</span> vuminhtu07@gmail.com</p>
+                        </li>
+                        <li>
+                            <p><span>Tel:</span> +358 466678936</p>
                         </li>
                     </ul>
                     <div class="social-icons">
@@ -384,8 +414,7 @@
 
             <!-- Page Tab Container Div -->
             <div class="col-lg-9 col-md-8 tab-container">
-                <!-- Header
-    ================================================== -->
+                <!-- Header -->
                 <div class="row">
                     <header class="col-md-12 sticky">
                         <nav>
@@ -401,56 +430,91 @@
                         </nav>
                     </header>
 
-                    <!-- Page Content ================================================== -->
+                    <!-- Page Content -->
                     <header class="col-md-12">
-                        <nav class="padside_30">
+                        <nav class="padside_30 padbot_30">
                             <div class="tab-content">
+                                <!-- Home tab -->
                                 <div id="home" class="tab-pane fade in active">
                                     <h2>Contact Information</h2>
-                                    <h3 class="tab-title">About me</h3>
-                                    <p class="padside_15">Astute Junior Software Engineer enthusiastic about developing
-                                        and
-                                        problem-solving in
-                                        software development. Experiences in Java, C++, Android Studio, HTML and Unity.
-                                        A
-                                        creative, quick learning, initiative & highly motivated worker.</p>
-                                    <h3 class="tab-title">Details</h3>
-                                    <p class="padside_15">"At vero eos et accusamus et iusto odio dignissimos ducimus
-                                        qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et
-                                        quas molestias excepturi sint occaecati cupiditate non provident, similique
-                                        sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
-                                        fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-                                        tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id
-                                        quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor
-                                        repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum
-                                        necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non
-                                        recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut
-                                        reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus
-                                        asperiores repellat."</p>
-                                    <h3 class="tab-title">Hobbies</h3>
-                                    <p class="padside_15">"At vero eos et accusamus et iusto odio dignissimos ducimus
-                                        qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et
-                                        quas molestias excepturi sint occaecati cupiditate non provident, similique
-                                        sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
-                                        fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-                                        tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id
-                                        quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor
-                                        repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum
-                                        necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non
-                                        recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut
-                                        reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus
-                                        asperiores repellat."</p>
+                                    <div class="col-md-12 col-xs-12 col-lg-12 pad_0">
+                                        <h3 class="tab-title">About me</h3>
+                                        <p class="padside_15">I am a Junior Software Engineer enthusiastic about
+                                            developing and problem-solving in software development. Experiences in Web
+                                            & Android Development, also highly passionate in learning new things to
+                                            keep up with the cutting edge of technologies. A creative, quick learning,
+                                            initiative & motivated worker.</p>
+                                    </div>
+                                    <div class="col-md-12 col-xs-12 col-lg-12 pad_0">
+                                        <h3 class="tab-title">Personality</h3>
+                                        <div class=" col-lg-5 col-md-5 col-xs-6 pad_0">
+                                            <div class="col-md-6 col-xs-6 col-lg-6 pad_0">
+                                                <p class="padside_15">Creativity</p>
+                                                <p class="padside_15">Teamwork</p>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-xs-6 skill-level">
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-custom" role="progressbar"
+                                                        aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">
+                                                    </div>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-custom" role="progressbar"
+                                                        aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5 col-md-5 col-xs-6 pad_0" style="float: right">
+                                            <div class="col-md-6 col-xs-6 col-lg-6 pad_0">
+                                                <p class="padside_15">Adaptability</p>
+                                                <p class="padside_15">Responsibility</p>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-xs-6 skill-level">
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-custom" role="progressbar"
+                                                        aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
+                                                    </div>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-custom" role="progressbar"
+                                                        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-xs-12 col-lg-12 pad_0">
+                                        <h3 class="tab-title">Hobbies</h3>
+                                        <div class="hobby padleft_15">
+                                            <img src="https://png.icons8.com/ios-glyphs/96/000000/volunteering.png" atl="">
+                                            <p>Volunteer</p>
+                                        </div>
+                                        <div class="hobby padleft_15">
+                                            <img src="https://png.icons8.com/ios-glyphs/96/000000/basketball.png" atl="">
+                                            <p>Basketball</p>
+                                        </div>
+                                        <div class="hobby padleft_15">
+                                            <img src="https://png.icons8.com/ios-glyphs/96/000000/queen.png" atl="">
+                                            <p>Board-game</p>
+                                        </div>
+                                        <div class="hobby padleft_15">
+                                            <img src="https://png.icons8.com/material/96/000000/controller.png" atl="">
+                                            <p>Video-game</p>
+                                        </div>
+                                    </div>
                                 </div>
+                                <!-- Education tab -->
                                 <div id="education" class="tab-pane fade">
                                     <h2>Education</h2>
                                     <div class="col-md-12 bot_15 pad_0">
                                         <div class="col-md-2 col-sm-2 col-xs-2 pad_0">
-                                            <h4>09-2013 ‒<br>2018</h4>
+                                            <h4>2013 ‒<br>2018</h4>
                                         </div>
                                         <div class="col-md-10 col-sm-10 col-xs-10">
-                                            <h3 class="exp-title">Bachelor of Information Technology</h3>
+                                            <h3 class="item-title">Bachelor of Information Technology</h3>
                                             <h5>Lapland University of Applied Sciences, Rovaniemi</h5>
-                                            <ul class="exp-info">
+                                            <ul class="item-info">
                                                 <li>
                                                     <p>A Software Engineer Degree with mainly focus on System
                                                         Administrator, System Designer & System Developer</p>
@@ -471,9 +535,9 @@
                                             <h4>2008 ‒<br>2011</h4>
                                         </div>
                                         <div class="col-md-10 col-sm-10 col-xs-10">
-                                            <h3 class="exp-title">Luong The Vinh High School for the Gifted</h3>
+                                            <h3 class="item-title">Luong The Vinh High School for the Gifted</h3>
                                             <h5>Vietnam</h5>
-                                            <ul class="exp-info">
+                                            <ul class="item-info">
                                                 <li>
                                                     <p>Department: Information Technology.</p>
                                                 </li>
@@ -484,70 +548,161 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!-- Skills tab -->
                                 <div id="skill" class="tab-pane fade">
                                     <h2>Skills</h2>
-                                    <h3 class="tab-title">Programming</h3>
-                                    <p class="padside_15">Astute Junior Software Engineer enthusiastic about developing
-                                        and
-                                        problem-solving in
-                                        software development. Experiences in Java, C++, Android Studio, HTML and Unity.
-                                        A
-                                        creative, quick learning, initiative & highly motivated worker.</p>
-                                    <h3 class="tab-title">Design</h3>
-                                    <p class="padside_15">"At vero eos et accusamus et iusto odio dignissimos ducimus
-                                        qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et
-                                        quas molestias excepturi sint occaecati cupiditate non provident, similique
-                                        sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
-                                        fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-                                        tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id
-                                        quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor
-                                        repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum
-                                        necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non
-                                        recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut
-                                        reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus
-                                        asperiores repellat."</p>
-                                    <h3 class="tab-title">Others</h3>
-                                    <p class="padside_15">"At vero eos et accusamus et iusto odio dignissimos ducimus
-                                        qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et
-                                        quas molestias excepturi sint occaecati cupiditate non provident, similique
-                                        sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
-                                        fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-                                        tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id
-                                        quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor
-                                        repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum
-                                        necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non
-                                        recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut
-                                        reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus
-                                        asperiores repellat."</p>
+                                    <div class="col-md-12 col-xs-12 col-lg-12 pad_0">
+                                        <h3 class="tab-title">Programming</h3>
+                                        <div class=" col-lg-5 col-md-5 col-xs-6 pad_0">
+                                            <div class="col-md-6 col-xs-6 col-lg-6 pad_0">
+                                                <p class="padside_15">HTML</p>
+                                                <p class="padside_15">CSS</p>
+                                                <p class="padside_15">PHP</p>
+                                                <p class="padside_15">JavaScript</p>
+                                                <p class="padside_15">SQL</p>
+                                                <p class="padside_15">Unity</p>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-xs-6 skill-level">
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-custom" role="progressbar"
+                                                        aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
+                                                    </div>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-custom" role="progressbar"
+                                                        aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                                                    </div>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-custom" role="progressbar"
+                                                        aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;">
+                                                    </div>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-custom" role="progressbar"
+                                                        aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                    </div>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-custom" role="progressbar"
+                                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
+                                                    </div>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-custom" role="progressbar"
+                                                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5 col-md-5 col-xs-6 pad_0" style="float: right">
+                                            <div class="col-md-6 col-xs-6 col-lg-6 pad_0">
+                                                <p class="padside_15">React</p>
+                                                <p class="padside_15">Java</p>
+                                                <p class="padside_15">Python</p>
+                                                <p class="padside_15">C++</p>
+                                                <p class="padside_15">Android</p>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-xs-6 skill-level">
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-custom" role="progressbar"
+                                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
+                                                    </div>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-custom" role="progressbar"
+                                                        aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%;">
+                                                    </div>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-custom" role="progressbar"
+                                                        aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                                                    </div>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-custom" role="progressbar"
+                                                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                                                    </div>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-custom" role="progressbar"
+                                                        aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-xs-12 col-lg-12 pad_0">
+                                        <h3 class="tab-title">Software</h3>
+                                        <div class=" col-lg-5 col-md-5 col-xs-6 pad_0">
+                                            <div class="col-md-6 col-xs-6 col-lg-6 pad_0">
+                                                <p class="padside_15">Photoshop</p>
+                                                <p class="padside_15">Git</p>
+                                                <p class="padside_15">Lunacy</p>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-xs-6 skill-level">
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-custom" role="progressbar"
+                                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+                                                    </div>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-custom" role="progressbar"
+                                                        aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                                                    </div>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-custom" role="progressbar"
+                                                        aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5 col-md-5 col-xs-6 pad_0" style="float: right">
+                                            <div class="col-md-6 col-xs-6 col-lg-6 pad_0">
+                                                <p class="padside_15">Office</p>
+                                                <p class="padside_15">Blender</p>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-xs-6 skill-level">
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-custom" role="progressbar"
+                                                        aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                                                    </div>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-custom" role="progressbar"
+                                                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div id="exp" class="tab-pane fade">
                                     <h2>Experiences</h2>
                                     <div class="col-md-12 bot_15 pad_0">
                                         <div class="col-md-2 col-sm-2 col-xs-2 pad_0">
-                                            <h4>2012 ‒<br>12-2013</h4>
+                                            <h4>06/2017 ‒<br>09/2017</h4>
                                         </div>
                                         <div class="col-md-10 col-sm-10 col-xs-10">
-                                            <h3 class="exp-title">Web Administrator at [<a href="https://vsava.com">vsava.com</a>]</h3>
-                                            <h5>Vietnam Small Animal Veterinary Association, Ho Chi Minh City</h5>
-                                            <ul class="exp-info">
+                                            <h3 class="item-title">Junior Software Developer</h3>
+                                            <h5>Ho Chi Minh City, Vietnam</h5>
+                                            <ul class="item-info">
                                                 <li>
-                                                    <p>Managed Vietnam Small Animal Veterinary Association Website</p>
-                                                </li>
-                                                <li>
-                                                    <p>Mainly responsible for content, user management and website
-                                                        maintanance.</p>
+                                                    <p>Create and maintenance a native Windows program to keep track of
+                                                        car rental for a family company.</p>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="col-md-12 bot_15 pad_0">
                                         <div class="col-md-2 col-sm-2 col-xs-2 pad_0">
-                                            <h4>06-2015 ‒<br>09-2015</h4>
+                                            <h4>06/2015 ‒<br>09/2015</h4>
                                         </div>
                                         <div class="col-md-10 col-sm-10 col-xs-10">
-                                            <h3 class="exp-title">Android Developer Trainee</h3>
+                                            <h3 class="item-title">Android Developer Trainee</h3>
                                             <h5>Appro Mobile Co. Ltd., Ho Chi Minh City</h5>
-                                            <ul class="exp-info">
+                                            <ul class="item-info">
                                                 <li>
                                                     <p>Be part of the development team in a Tax Consulting app for iOS
                                                         &
@@ -565,15 +720,18 @@
                                     </div>
                                     <div class="col-md-12 bot_15 pad_0">
                                         <div class="col-md-2 col-sm-2 col-xs-2 pad_0">
-                                            <h4>06-2017 ‒<br>09-2017</h4>
+                                            <h4>2012 ‒<br>12/2013</h4>
                                         </div>
                                         <div class="col-md-10 col-sm-10 col-xs-10">
-                                            <h3 class="exp-title">Junior Software Developer</h3>
-                                            <h5>Ho Chi Minh City, Vietnam</h5>
-                                            <ul class="exp-info">
+                                            <h3 class="item-title">Web Administrator at [<a href="https://vsava.com">vsava.com</a>]</h3>
+                                            <h5>Vietnam Small Animal Veterinary Association, Ho Chi Minh City</h5>
+                                            <ul class="item-info">
                                                 <li>
-                                                    <p>Create and maintenance a native Windows program to keep track of
-                                                        car rental for a family company.</p>
+                                                    <p>Managed Vietnam Small Animal Veterinary Association Website</p>
+                                                </li>
+                                                <li>
+                                                    <p>Mainly responsible for content, user management and website
+                                                        maintanance.</p>
                                                 </li>
                                             </ul>
                                         </div>
@@ -581,27 +739,19 @@
                                 </div>
                             </div>
                         </nav>
-                        <a href="https://icons8.com">Icon pack by Icons8</a>
+                        <!-- footer -->
+                        <footer class="col-md-12 pad_0">
+                            <nav>
+                                <div class="col padside_30" style="float:right">
+                                    <a href="https://icons8.com">Icon pack by Icons8</a>
+                                </div>
+                            </nav>
+                        </footer>
                     </header> <!-- col-md-12 end -->
                 </div><!-- row end -->
             </div> <!-- Tab Container - End -->
         </div> <!-- Row - End -->
     </div> <!-- Wrapper - End -->
-
-
-    <script language="javascript">
-        window.onscroll = function () { myFunction() };
-
-        function myFunction() {
-            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            var scrolled = (winScroll / height) * 100;
-            $('#myBar')
-                .css("width", scrolled + "%")
-                .attr("aria-valuenow", scrolled)
-                .text(scrolled + "% Complete");
-        }
-    </script>
 </body>
 
 </html>
